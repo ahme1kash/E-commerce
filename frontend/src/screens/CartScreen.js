@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import {useDispatch,useSelector} from 'react-redux'
 import {Row,Col,ListGroup,Image,Form,Button,Card} from 'react-bootstrap'
 import Message from '../Components/Message'
-import {addToBasket,removeFromBasket} from '../actions/cartActions'
+import {addToCart,removeFromCart} from '../actions/cartActions'
 
 
 const CartScreen = ({match,location, history}) =>{
@@ -15,11 +15,11 @@ const CartScreen = ({match,location, history}) =>{
     const {cartItems} = cart
     useEffect(()=>{
         if(productId){
-            dispatch(addToBasket(productId,qty))
+            dispatch(addToCart(productId,qty))
         }},[dispatch,productId,qty]
         )
         const removeFromCartHandler = (id) => {
-            dispatch(removeFromBasket(id))
+            dispatch(removeFromCart(id))
         }
 
         const checkoutHandler = () =>{
@@ -46,13 +46,13 @@ const CartScreen = ({match,location, history}) =>{
 
                            </Col>
                            <Col md = {2}>
-                               Rs{item.price}
+                               Rs {item.price}
                            </Col>
                            <Col md = {2}>
                            <Form.Control 
                            as = 'select' 
                            value = {item.qty} 
-                           onChange = {(e)=> dispatch(addToBasket(item.product,Number(e.target.value)))}
+                           onChange = {(e)=> dispatch(addToCart(item.product,Number(e.target.value)))}
                                         >
                     
                                       {  [...Array((item.countInStock)).keys()].map((x) => (

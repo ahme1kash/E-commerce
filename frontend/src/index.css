@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+ 
 }
 
 code {
@@ -61,6 +63,75 @@ h2{
 }
 .rating span{
   margin:0.1rem;
+}
+.x1 {
+  font-size: 30px;
+  background-color:bisque; 
+}
+.x2 {
+  font-size: 30px;
+  background-color:rgb(245, 184, 184); 
+}
+.x3 {
+  font-size: 30px;
+  background-color:rgb(248, 194, 129); 
+}
+.x4 {
+  font-size: 30px;
+  background-color:rgb(167, 193, 243); 
+}
+.nav-link{
+  color:rgb(0, 0, 0);
+}
+input[type=radio] {
+  border: 10px;
+  width: 60%;
+  height: 1.5em;
+ margin-left: 100px;
+  
+}
+.shift{
+   text-align: left;
+   margin-left: -100px;
+   font-size: 15px;
+}
+/* carousel*/
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  display: flex;
+}
+.carousel-caption {
+  position: absolute;
+  top: 0;
+}
+
+.carousel-caption h2 {
+  color: rgb(253, 208, 125);
+}
+
+.carousel img {
+  height: 300px;
+  padding: 30px;
+  margin: 40px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  size:20rem;
+}
+.carousel a {
+  margin: 0 auto;
+}
+.carousel-bg{
+  background-color: rgb(85, 180, 218);
+  /*  */
+  /*  */
+ 
+}
+@media (max-width: 900px) {
+  .carousel-caption h2 {
+    font-size: 2.5vw;
+  }
 }
 
 

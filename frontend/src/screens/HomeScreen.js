@@ -1,28 +1,46 @@
 import React,{useEffect} from 'react'
+import {Helmet} from "react-helmet";
 import {useDispatch,useSelector} from 'react-redux'
 import Product from '../Components/Product'
 import Message from '../Components/Message'
 import Loader from '../Components/Loader'
-import { Row, Col} from 'react-bootstrap'
+import Paginate from '../Components/Paginate'
+import ProductCarousel from '../Components/ProductCarousel'
+import { Row, Col,Carousel} from 'react-bootstrap'
 import {listProducts} from '../actions/productActions'
 
-const HomeScreen = () => {
+const HomeScreen = ({match}) => {
+    const keyword = match.params.keyword
+    const pageNumber = match.params.pageNumber || 1
     const dispatch =  useDispatch()
     const productList = useSelector((state) => state.productList)
-    const {loading,error,products} = productList
+    const {loading,error,products,page,pages} = productList
     useEffect(() => {
 
-        dispatch(listProducts())
+        dispatch(listProducts(keyword,pageNumber))
       
     
-    },[dispatch] )
+    },[dispatch,keyword,pageNumber] )
 
     return (
         <> 
+        <Helmet>
+            <title>Welcome to E-commerce | Home</title>
+            <meta name='description' 
+            content='We sell the best products for cheap'
+            />
+
+
+            <meta name='keywords'
+             content='Electronics and General items, buy the premium at cheapest prices' 
+            />
+
+        </Helmet>
+        {!keyword && <ProductCarousel/>}
         <h1 style = {{color:' #0000cc'}}> Latest Products</h1>
         {loading ? (<Loader/>):error?
         (<Message variant ='danger'>{error}</Message>):(
-        
+        <>
         <Row>
             {products.map((product) => (
                 <Col key = {product._id} sm = {12} md ={6} lg={4} xl = {3}>
@@ -32,12 +50,10 @@ const HomeScreen = () => {
                 </Col>
                 
             ))}
-        </Row>)}
-        <div className = 'hello1'>
-       
-        </div>
-       
-        
+        </Row>
+        <Paginate pages={pages} page={page} keyword={keyword ? keyword: ''}/>
+        </>
+        )}    
         </>
     )
 } 

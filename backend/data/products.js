@@ -22,8 +22,8 @@ const products = [
   category: 'Electronics',
   price: 100000,
   countInStock: 7,
-  rating: 4.0,
-  numReviews: 8,
+  rating: 4.7,
+  numReviews: 50,
 },
 {
   
@@ -178,7 +178,7 @@ const products = [
   category: 'Stationery',
   price: 110,
   countInStock: 30,
-  rating: 4.8,
+  rating: 4.4,
   numReviews: 4,
 },
 {
@@ -216,7 +216,7 @@ const products = [
   brand:'Dettol',
   price: 70,
   countInStock: 0,
-  rating: 4.9,
+  rating: 4.6,
   numReviews: 27,
 },
 {
@@ -312,7 +312,7 @@ const products = [
 },
 {
  
-  name: 'Marriage ring',
+  name: 'Tanishq Marriage ring',
   image: '/images/Ring.jfif',
   description:
     '22 carat gold ring by tanishq',
@@ -364,7 +364,7 @@ const products = [
 },
 {
   
-  name: 'Tablet',
+  name: 'Lennovo Tablet',
   image: '/images/tablet.jfif',
   description:
     '3Gb ramand 32 Gb storage ,10.1 inch display, Wifi-Hotspot Availble, Gorilla glass display',
@@ -390,7 +390,7 @@ const products = [
 },
 {
  
-  name: 'Wallet',
+  name: ' Hornbull Wallet',
   image: '/images/wallet.jfif',
   description:
   'Clay coloured durable multi pocket wallet',
