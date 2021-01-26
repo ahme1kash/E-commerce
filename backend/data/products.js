@@ -93,7 +93,7 @@ const products = [
 {
 
   name: 'Fogg Master',
-  image: '/images/Bodyspray.jfif',
+  image: '/images/BodySpray.jfif',
   description:
     'Premium Perfumes for Men',
   brand: 'Fogg',
@@ -106,7 +106,7 @@ const products = [
 {
  
   name: 'Clay craft set',
-  image: '/images/clayCraftSet.jfif',
+  image: '/images/ClayCraftSet.jfif',
   description:
     'Finest Bone china set',
   brand: 'Bharat',
@@ -235,7 +235,7 @@ const products = [
 {
  
   name: 'Ladies Goggles',
-  image: '/images/Ladiesgoggles.jfif',
+  image: '/images/LadiesGoggles.jfif',
   description:
     'Best quality sun glasses. Prevents harmful UV-b rays',
   brand: 'Fast track',
@@ -391,7 +391,7 @@ const products = [
 {
  
   name: ' Hornbull Wallet',
-  image: '/images/wallet.jfif',
+  image: '/images/Wallet.jfif',
   description:
   'Clay coloured durable multi pocket wallet',
   brand: 'Hornbull',
