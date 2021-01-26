@@ -222,7 +222,7 @@ const products = [
 {
  
   name: 'Lifebuoy Hand Wash',
-  image: '/images/Handwash.jfif',
+  image: '/images/HandWash.jfif',
   description:
     'Helps in Germ protection and maintaining hygiene.',
     brand: 'Lifebuoy',
